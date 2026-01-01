@@ -9,7 +9,7 @@ Welcome to the Kotlin Multiplatform SDK for Solana! This SDK leverages the power
 
 ## Features
 
-- **Cross-Platform**: Use a single codebase to target Android, iOS Ecosystem, and JVM.
+- **Cross-Platform**: Use a single codebase to target Android, iOS, watchOS, and JVM.
 - **Create Transactions**: Construct and manage Solana transactions with ease.
 - **Sign with Signer**: Safely and securely sign your transactions with a robust signer module.
 - **Interact with RPC**: Facilitate communication with the Solana blockchain through RPC calls. With a powerful serialization capabilities.
@@ -53,7 +53,7 @@ We do support composability. Each module can be used alone or by referencing the
 Import the SDK into your Kotlin Multiplatform project by adding the following dependency to your build.gradle.kts:
 
 ```kotlin
-implementation("foundation.metaplex:solana:$Version")
+implementation("io.github.iml1s:kotlin-solana:1.0.0")
 ```
 
 Our SDK is architecturally composable, allowing you to install only the dependencies necessary for your specific use case, which keeps your application optimized and resource-efficient. The library modules are available on **Maven**, facilitating easy integration into your Kotlin project.
