@@ -1,5 +1,7 @@
 # Kotlin Multiplatform SDK for Solana (KMP)
 
+![Banner](assets/banner.png)
+
 ## Overview
 
 Welcome to the Kotlin Multiplatform SDK for Solana! This SDK leverages the power of Kotlin Multiplatform to enable developers to work with Solana blockchain across various platforms including Android, iOS Ecosystem, and the JVM. Utilizing this SDK, developers can create transactions, sign them using various signer modules, and interact with Solana through RPC calls with ease.
