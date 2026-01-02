@@ -7,6 +7,50 @@
 Welcome to the Kotlin Multiplatform SDK for Solana! This SDK leverages the power of Kotlin Multiplatform to enable developers to work with Solana blockchain across various platforms including Android, iOS Ecosystem, and the JVM. Utilizing this SDK, developers can create transactions, sign them using various signer modules, and interact with Solana through RPC calls with ease.
 
 
+## 🏗️ SDK Architecture
+
+```mermaid
+graph TD
+    APP[dApp / Wallet] --> SDK[kotlin-solana]
+    
+    subgraph "Composable Modules"
+        SDK --> RPC[RPC Client]
+        SDK --> TX[TransactionBuilder]
+        SDK --> SIGN[Signer Interface]
+        SDK --> MPL[Metaplex / Bubblegum]
+    end
+    
+    subgraph "Core Components"
+        RPC --> KTOR[Ktor / Serialization]
+        TX --> ED25519[EdDSA / SolanaEddsa]
+        TX --> PK[PublicKey Management]
+    end
+```
+
+---
+
+## 🏗️ SDK Architecture
+
+```mermaid
+graph TD
+    APP[dApp / Wallet] --> SDK[kotlin-solana]
+    
+    subgraph "Composable Modules"
+        SDK --> RPC[RPC Client]
+        SDK --> TX[TransactionBuilder]
+        SDK --> SIGN[Signer Interface]
+        SDK --> MPL[Metaplex / Bubblegum]
+    end
+    
+    subgraph "Core Components"
+        RPC --> KTOR[Ktor / Serialization]
+        TX --> ED25519[EdDSA / SolanaEddsa]
+        TX --> PK[PublicKey Management]
+    end
+```
+
+---
+
 ## Features
 
 - **Cross-Platform**: Use a single codebase to target Android, iOS, watchOS, and JVM.
