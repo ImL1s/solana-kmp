@@ -1,11 +1,11 @@
-*.iml
+
+# Standard Kotlin/Gradle Ignores
 .gradle
-.idea
+/build
+/.idea
 .DS_Store
-build
-captures
-.externalNativeBuild
+/local.properties
+*.iml
 .cxx
-local.properties
-xcuserdata
-XCFrameworkOutputs/
+/captures
+.externalNativeBuild
