@@ -15,6 +15,16 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "solana"
+
+fun includeBuildIfExists(path: String) {
+    if (file(path).exists()) {
+        includeBuild(path)
+    }
+}
+
+includeBuildIfExists("../kotlin-crypto-pure")
+includeBuildIfExists("../kotlin-address")
+
 include(":solana")
 include(":solanapublickeys")
 include(":base58")
@@ -25,3 +35,4 @@ include(":rpc")
 include(":signer")
 include(":mplbubblegum")
 include(":mpltokenmetadata")
+
