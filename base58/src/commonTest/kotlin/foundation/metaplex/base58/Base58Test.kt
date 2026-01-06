@@ -1,7 +1,6 @@
 package foundation.metaplex.base58
 
 import io.github.iml1s.crypto.hexToByteArray
-import kotlinx.coroutines.runBlocking
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -23,14 +22,14 @@ class Base58Test {
     )
 
     @Test
-    fun encodingToBase58Works() = runBlocking {
+    fun encodingToBase58Works() {
         TEST_VECTORS.forEach {
             assertEquals(it.value, it.key.hexToByteArray().encodeToBase58String())
         }
     }
 
     @Test
-    fun decodingFromBase58Works() = runBlocking {
+    fun decodingFromBase58Works() {
         TEST_VECTORS.forEach {
             // I do the decode and re-encode to check versus strings. Checking ByteArrays require deep check
             assertEquals(it.value.decodeBase58().encodeToBase58String(), it.key.hexToByteArray().encodeToBase58String())
