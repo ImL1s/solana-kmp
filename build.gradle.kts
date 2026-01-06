@@ -1,19 +1,19 @@
 import org.jetbrains.kotlin.gradle.plugin.extraProperties
 
-buildscript {
-    dependencies {
-        classpath(libs.gradle)
-    }
-}
+// buildscript {
+//     dependencies {
+//         classpath(libs.gradle)
+//     }
+// }
 plugins {
     alias(libs.plugins.android.library).apply(false)
     alias(libs.plugins.kotlin.multiplatform).apply(false)
-    alias(libs.plugins.maven.publish).apply(false)
-    alias(libs.plugins.kmp.framework.bundler).apply(false)
+    // // alias(libs.plugins.maven.publish).apply(false)
+    // // alias(libs.plugins.kmp.framework.bundler).apply(false)
 }
 
 tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
+    delete(rootProject.layout.buildDirectory)
 }
 
 subprojects.forEach { project ->
@@ -31,3 +31,7 @@ subprojects.forEach { project ->
         }
     }
 }
+
+
+
+

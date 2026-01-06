@@ -1,18 +1,18 @@
-import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
+// import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.android.library)
-    alias(libs.plugins.maven.publish)
+    // alias(libs.plugins.maven.publish)
     kotlin("plugin.serialization") version "1.9.0"
-    alias(libs.plugins.kmp.framework.bundler)
+    // alias(libs.plugins.kmp.framework.bundler)
 }
 
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
 kotlin {
-    targetHierarchy.default()
+    applyDefaultHierarchyTemplate()
 
-    androidTarget {
+    androidTarget().apply {
         compilations.all {
             kotlinOptions {
                 jvmTarget = "11"
@@ -22,7 +22,7 @@ kotlin {
 
     jvm()
 
-    val xcf = XCFramework()
+    // val xcf = XCFramework()
     listOf(
         iosX64(),
         iosArm64(),
@@ -32,7 +32,7 @@ kotlin {
     ).forEach {
         it.binaries.framework {
             baseName = "readapi"
-            xcf.add(this)
+            // xcf.add(this)
         }
     }
 
@@ -61,8 +61,7 @@ kotlin {
     }
 }
 
-android {
-    namespace = "foundation.metaplex.readapi"
+android { namespace = "foundation.metaplex.readapi"
     compileSdk = 33
     defaultConfig {
         minSdk = 24
@@ -73,13 +72,17 @@ android {
     }
 }
 
-mavenPublishing {
+/* mavenPublishing {
     coordinates(group as String, "readapi", version as String)
-}
+} */
 
-frameworkBundlerConfig {
+/* frameworkBundlerConfig {
     frameworkName.set("readapi")
     outputPath.set("$rootDir/XCFrameworkOutputs")
     versionName.set(version as String)
     frameworkType = com.prof18.kmpframeworkbundler.data.FrameworkType.XC_FRAMEWORK
-}
+} */
+
+
+
+
