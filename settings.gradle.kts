@@ -14,7 +14,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "solana"
+rootProject.name = "kotlin-solana"
 
 fun includeBuildIfExists(path: String) {
     if (file(path).exists()) {
