@@ -13,8 +13,16 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout kotlin-solana
         uses: actions/checkout@v3
+        with:
+          path: kotlin-solana
+
+      - name: Checkout kotlin-crypto-pure
+        uses: actions/checkout@v3
+        with:
+          repository: ImL1s/kotlin-crypto-pure
+          path: kotlin-crypto-pure
 
       - name: Validate Gradle Wrapper
         uses: gradle/wrapper-validation-action@v1
@@ -28,8 +36,10 @@ jobs:
 
       # Build
       - name: Grant execute permission for gradlew
+        working-directory: kotlin-solana
         run: chmod +x gradlew
       - name: Test
+        working-directory: kotlin-solana
         run: ./gradlew jvmTest -Ptesting.rpc.defaultUrl=$ORG_GRADLE_PROJECT_solanarpc -PexcludeIntegrationTests
         env:
           ORG_GRADLE_PROJECT_solanarpc: ${{ secrets.SOLANA_RPC_URL }}
@@ -47,8 +57,16 @@ jobs:
     if: ${{ github.event_name == 'release' && startsWith(github.event.release.tag_name, 'v') }}
 
     steps:
-      - name: Checkout
+      - name: Checkout kotlin-solana
         uses: actions/checkout@v3
+        with:
+          path: kotlin-solana
+
+      - name: Checkout kotlin-crypto-pure
+        uses: actions/checkout@v3
+        with:
+          repository: ImL1s/kotlin-crypto-pure
+          path: kotlin-crypto-pure
       - name: Configure JDK
         uses: actions/setup-java@v3
         with:
@@ -56,9 +74,11 @@ jobs:
           distribution: 'temurin'
           cache: gradle
       - name: Grant execute permission for gradlew
+        working-directory: kotlin-solana
         run: chmod +x gradlew
       
       - name: Publish to Maven Central
+        working-directory: kotlin-solana
         run: ./gradlew clean publishAllPublicationsToMavenCentral --stacktrace -P version=${TAG:1}
         env:
           ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.SONATYPE_NEXUS_USERNAME }}
@@ -68,12 +88,13 @@ jobs:
           ORG_GRADLE_PROJECT_signingInMemoryKeyPassword: ${{ secrets.ARTIFACT_SIGNING_PRIVATE_KEY_PASSWORD }}
           TAG: ${{ github.event.release.tag_name }}
       - name: Build XCFrameworks
+        working-directory: kotlin-solana
         run: ./gradlew buildReleaseXCFramework --stacktrace -P version=${TAG:1}
         env:
           TAG: ${{ github.event.release.tag_name }}
       - name: Zip XCFramework files
         run: |
-          cd XCFrameworkOutputs/
+          cd kotlin-solana/XCFrameworkOutputs/
           zip -vr amount.xcframework.zip amount.xcframework/
           zip -vr base58.xcframework.zip base58.xcframework/
           zip -vr mplbubblegum.xcframework.zip mplbubblegum.xcframework/
@@ -89,13 +110,14 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
-            XCFrameworkOutputs/amount.xcframework.zip
-            XCFrameworkOutputs/base58.xcframework.zip
-            XCFrameworkOutputs/mplbubblegum.xcframework.zip
-            XCFrameworkOutputs/solana.xcframework.zip
-            XCFrameworkOutputs/solanapublickeys.xcframework.zip
-            XCFrameworkOutputs/solanaeddsa.xcframework.zip
-            XCFrameworkOutputs/readapi.xcframework.zip
-            XCFrameworkOutputs/rpc.xcframework.zip
-            XCFrameworkOutputs/signer.xcframework.zip
-            XCFrameworkOutputs/mpltokenmetadata.xcframework.zip
+          files: |
+            kotlin-solana/XCFrameworkOutputs/amount.xcframework.zip
+            kotlin-solana/XCFrameworkOutputs/base58.xcframework.zip
+            kotlin-solana/XCFrameworkOutputs/mplbubblegum.xcframework.zip
+            kotlin-solana/XCFrameworkOutputs/solana.xcframework.zip
+            kotlin-solana/XCFrameworkOutputs/solanapublickeys.xcframework.zip
+            kotlin-solana/XCFrameworkOutputs/solanaeddsa.xcframework.zip
+            kotlin-solana/XCFrameworkOutputs/readapi.xcframework.zip
+            kotlin-solana/XCFrameworkOutputs/rpc.xcframework.zip
+            kotlin-solana/XCFrameworkOutputs/signer.xcframework.zip
+            kotlin-solana/XCFrameworkOutputs/mpltokenmetadata.xcframework.zip
