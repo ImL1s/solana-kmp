@@ -1,6 +1,6 @@
 package foundation.metaplex.base58
 
-import io.github.iml1s.crypto.Sha256
+
 
 private const val ENCODED_ZERO = '1'
 private const val CHECKSUM_SIZE = 4
@@ -121,9 +121,9 @@ private fun divmod(number: ByteArray, firstDigit: UInt, base: UInt, divisor: UIn
  * @return the base58-encoded string
  */
 suspend fun ByteArray.encodeToBase58WithChecksum() = ByteArray(size + CHECKSUM_SIZE).apply {
-    this@encodeToBase58WithChecksum.copyInto(this, endIndex = this@encodeToBase58WithChecksum.size + 1)
+    // this@encodeToBase58WithChecksum.copyInto(this, endIndex = this@encodeToBase58WithChecksum.size + 1)
     // System.arraycopy(this@encodeToBase58WithChecksum, 0, this, 0, this@encodeToBase58WithChecksum.size)
-    val checksum = Sha256.hash(this@encodeToBase58WithChecksum)
+    val checksum = sha256(this@encodeToBase58WithChecksum)
     checksum.copyInto(this, startIndex = this@encodeToBase58WithChecksum.size, endIndex = CHECKSUM_SIZE)
     // System.arraycopy(checksum, 0, this, this@encodeToBase58WithChecksum.size, CHECKSUM_SIZE)
 
@@ -138,7 +138,7 @@ suspend fun String.decodeBase58WithChecksum(): ByteArray {
 
     val payload = rawBytes.copyOfRange(0, rawBytes.size - CHECKSUM_SIZE)
 
-    val hash = Sha256.hash(payload)
+    val hash = sha256(payload)
     val computedChecksum = hash.copyOfRange(0, CHECKSUM_SIZE)
 
     if (checksum.contentEquals(computedChecksum)) {
@@ -146,4 +146,12 @@ suspend fun String.decodeBase58WithChecksum(): ByteArray {
     } else {
         throw IllegalArgumentException("Checksum mismatch: $checksum is not computed checksum $computedChecksum")
     }
+}
+
+private fun sha256(data: ByteArray): ByteArray {
+    val digest = io.github.iml1s.crypto.Digests.sha256()
+    digest.update(data, 0, data.size)
+    val out = ByteArray(digest.getDigestSize())
+    digest.doFinal(out, 0)
+    return out
 }

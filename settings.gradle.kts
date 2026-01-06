@@ -18,7 +18,10 @@ rootProject.name = "kotlin-solana"
 
 fun includeBuildIfExists(path: String) {
     if (file(path).exists()) {
+        println("ANTIGRAVITY: Including build from $path")
         includeBuild(path)
+    } else {
+        println("ANTIGRAVITY: Build path $path does not exist!")
     }
 }
 
