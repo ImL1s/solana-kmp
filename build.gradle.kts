@@ -1,7 +1,7 @@
+import org.jetbrains.kotlin.gradle.plugin.extraProperties
+
 group = "io.github.iml1s"
 version = "1.3.0"
-
-import org.jetbrains.kotlin.gradle.plugin.extraProperties
 
 // buildscript {
 //     dependencies {
