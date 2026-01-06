@@ -18,7 +18,7 @@ rpccore = "0.2.5"
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
 clikt = { module = "com.github.ajalt.clikt:clikt", version.ref = "clikt" }
 bignum = { module = "com.ionspin.kotlin:bignum", version.ref = "bignum" }
-crypto = { module = "io.github.iml1s:kotlin-crypto-pure", version = "1.3.0" }
+crypto = { module = "io.github.iml1s:crypto-core", version = "1.3.0" }
 buffer = { module = "com.ditchoom:buffer", version.ref = "buffer" }
 kborsh = { group = "io.github.funkatronics", name = "kborsh", version.ref = "kborsh" }
 web3solana = { group = "com.solanamobile", name = "web3-solana", version.ref = "web3core" }
