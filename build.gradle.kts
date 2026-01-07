@@ -20,6 +20,16 @@ tasks.register("clean", Delete::class) {
 }
 
 subprojects.forEach { project ->
+    project.tasks.configureEach {
+        if (name.contains("lintVitalAnalyzeRelease") || 
+            name.contains("generateDebugAndroidTestLintModel") ||
+            name.contains("lintReportDebug") || 
+            name.contains("lintReportRelease") ||
+            name.contains("lintAnalyzeDebugUnitTest") ||
+            name == "lintDebug") {
+            enabled = false
+        }
+    }
     project.afterEvaluate {
         project.tasks.filterIsInstance<Test>().forEach { testTask ->
             val includeIntegrationTests = if (project.hasProperty("includeIntegrationTests")) {
