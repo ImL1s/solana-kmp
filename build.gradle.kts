@@ -26,6 +26,8 @@ subprojects.forEach { project ->
             name.contains("lintReportDebug") || 
             name.contains("lintReportRelease") ||
             name.contains("lintAnalyzeDebugUnitTest") ||
+            name.contains("testDebugUnitTest") ||
+            name.contains("testReleaseUnitTest") ||
             name == "lintDebug") {
             enabled = false
         }
