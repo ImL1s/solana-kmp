@@ -1,7 +1,6 @@
 package foundation.metaplex.rpc.serializers
 
-import diglol.crypto.Hash
-import kotlinx.coroutines.runBlocking
+import io.github.iml1s.crypto.Sha256
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
@@ -71,11 +70,9 @@ open class AnchorDiscriminatorSerializer<T>(namespace: String, ixName: String,
 )
     : DiscriminatorSerializer<T>(buildDiscriminator(namespace, ixName), serializer) {
     companion object {
-        fun buildDiscriminator(namespace: String, ixName: String) = runBlocking {
-            Hash(Hash.Type.SHA256)
-                .hash("$namespace:$ixName".encodeToByteArray())
+        fun buildDiscriminator(namespace: String, ixName: String) =
+            Sha256.hash("$namespace:$ixName".encodeToByteArray())
                 .sliceArray(0 until 8)
-        }
     }
 }
 

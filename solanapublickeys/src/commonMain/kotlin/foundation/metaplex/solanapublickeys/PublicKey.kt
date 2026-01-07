@@ -4,7 +4,7 @@ import com.ditchoom.buffer.PlatformBuffer
 import com.ditchoom.buffer.allocate
 import com.solana.publickey.SolanaPublicKey
 import foundation.metaplex.base58.decodeBase58
-import diglol.crypto.Hash
+import io.github.iml1s.crypto.Sha256
 import kotlin.experimental.ExperimentalObjCName
 import kotlin.native.ObjCName
 
@@ -98,7 +98,7 @@ data class PublicKey(val publicKeyBytes: ByteArray) : SolanaPublicKey(publicKeyB
                 throw RuntimeException(e)
             }
             buffer.resetForRead()
-            val hash = Hash(type = Hash.Type.SHA256).hash(buffer.readByteArray(bufferSize))
+            val hash = Sha256.hash(buffer.readByteArray(bufferSize))
             if (TweetNaclFast.is_on_curve(hash) != 0) {
                 throw RuntimeException("Invalid seeds, address must fall off the curve")
             }

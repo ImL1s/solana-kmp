@@ -2,7 +2,7 @@ package foundation.metaplex.solanaeddsa
 
 import com.solana.publickey.PublicKey
 import com.solana.publickey.SolanaPublicKey
-import diglol.crypto.Ed25519
+import io.github.iml1s.crypto.Solana
 import foundation.metaplex.solanapublickeys.Pda
 import kotlin.experimental.ExperimentalObjCName
 import kotlin.native.ObjCName
@@ -20,7 +20,7 @@ object SolanaEddsa {
      * @return A new Ed25519 key pair represented by a [Keypair] object.
      */
     suspend fun generateKeypair(): Keypair {
-        val keypair = Ed25519.generateKeyPair()
+        val keypair = Solana.generateKeyPair()
         return SolanaKeypair(SolanaPublicKey(keypair.publicKey), keypair.privateKey)
     }
 
@@ -31,8 +31,8 @@ object SolanaEddsa {
      * @return An Ed25519 key pair represented by a [Keypair] object.
      */
     suspend fun createKeypairFromSecretKey(secretKey: ByteArray): Keypair {
-        val keypair = Ed25519.generateKeyPair(secretKey)
-        return SolanaKeypair(SolanaPublicKey(keypair.publicKey), keypair.privateKey)
+        val publicKey = Solana.derivePublicKey(secretKey)
+        return SolanaKeypair(SolanaPublicKey(publicKey), secretKey)
     }
 
     /**
@@ -69,7 +69,7 @@ object SolanaEddsa {
      * @return The program-derived address (PDA) as a [Pda] object.
      */
     suspend fun sign(message: ByteArray, keypair: Keypair): ByteArray =
-        Ed25519.sign(keypair.secretKey, message)
+        Solana.sign(message, keypair.secretKey)
 
     /**
      * Signs a message using the provided key pair's secret key.
@@ -82,5 +82,5 @@ object SolanaEddsa {
         message: ByteArray,
         signature: ByteArray,
         publicKey: PublicKey
-    ): Boolean = Ed25519.verify(signature, publicKey.bytes, message)
+    ): Boolean = Solana.verify(message, signature, publicKey.bytes)
 }
