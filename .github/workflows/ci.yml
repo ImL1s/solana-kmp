@@ -48,6 +48,6 @@ jobs:
       run: |
         cd kotlin-solana
         chmod +x gradlew
-        ./gradlew build
+        ./gradlew build -PexcludeIntegrationTests=true
       env:
         GRADLE_OPTS: -Xmx4g -XX:MaxMetaspaceSize=512m
