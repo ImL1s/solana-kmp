@@ -21,15 +21,16 @@ tasks.register("clean", Delete::class) {
 
 subprojects.forEach { project ->
     project.tasks.configureEach {
-        if (name.contains("lintVitalAnalyzeRelease") || 
-            name.contains("generateDebugAndroidTestLintModel") ||
-            name.contains("lintReportDebug") || 
-            name.contains("lintReportRelease") ||
-            name.contains("lintAnalyzeDebugUnitTest") ||
-            name.contains("testDebugUnitTest") ||
-            name.contains("testReleaseUnitTest") ||
-            name == "lintDebug") {
-            enabled = false
+        val taskName = name.lowercase()
+        if (taskName.contains("lint") || 
+            taskName.contains("androidtest") ||
+            (taskName.contains("unittest") && !taskName.contains("jvm"))) {
+            // Only disable if it's not a platform test we want
+            if (!taskName.contains("jvmtest") && 
+                !taskName.contains("iostest") && 
+                !taskName.contains("macostest")) {
+                enabled = false
+            }
         }
     }
     project.afterEvaluate {
