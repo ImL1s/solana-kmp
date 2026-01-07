@@ -14,12 +14,12 @@ jobs:
 
     steps:
       - name: Checkout kotlin-solana
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: kotlin-solana
 
       - name: Checkout kotlin-crypto-pure
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: ImL1s/kotlin-crypto-pure
           path: kotlin-crypto-pure
