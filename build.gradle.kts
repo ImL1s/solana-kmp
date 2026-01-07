@@ -28,7 +28,8 @@ subprojects.forEach { project ->
             // Only disable if it's not a platform test we want
             if (!taskName.contains("jvmtest") && 
                 !taskName.contains("iostest") && 
-                !taskName.contains("macostest")) {
+                !taskName.contains("macostest") &&
+                !taskName.contains("watchostest")) {
                 enabled = false
             }
         }
