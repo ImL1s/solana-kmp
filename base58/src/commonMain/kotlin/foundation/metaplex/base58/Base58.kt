@@ -124,7 +124,7 @@ suspend fun ByteArray.encodeToBase58WithChecksum() = ByteArray(size + CHECKSUM_S
     // this@encodeToBase58WithChecksum.copyInto(this, endIndex = this@encodeToBase58WithChecksum.size + 1)
     // System.arraycopy(this@encodeToBase58WithChecksum, 0, this, 0, this@encodeToBase58WithChecksum.size)
     val checksum = Sha256.hash(this@encodeToBase58WithChecksum)
-    checksum.copyInto(this, startIndex = this@encodeToBase58WithChecksum.size, endIndex = CHECKSUM_SIZE)
+    checksum.copyInto(this, destinationOffset = this@encodeToBase58WithChecksum.size, startIndex = 0, endIndex = CHECKSUM_SIZE)
     // System.arraycopy(checksum, 0, this, this@encodeToBase58WithChecksum.size, CHECKSUM_SIZE)
 
 }.encodeToBase58String()
