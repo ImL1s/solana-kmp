@@ -169,7 +169,7 @@ class SolanaMessage(
                     this.numReadonlyUnsignedAccounts = numReadonlyUnsignedAccounts.toByte()
                 },
                 accountKeys = accountKeys.map { SolanaPublicKey.from(it) },
-                recentBlockhash = String().plus(recentBlockhash.encodeToBase58String()),
+                recentBlockhash = recentBlockhash.encodeToBase58String(),
                 instructions = instructions
             )
         }

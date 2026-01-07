@@ -1,5 +1,7 @@
 package foundation.metaplex.amount
 
+@file:Suppress("UNCHECKED_CAST")
+
 import com.ionspin.kotlin.bignum.integer.BigInteger
 import kotlin.experimental.ExperimentalObjCName
 import kotlin.math.absoluteValue
