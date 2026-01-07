@@ -2,9 +2,9 @@ name: Kotlin CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, master ]
   pull_request:
-    branches: [ main, develop ]
+    branches: [ main, develop, master ]
   release:
     types: [ published ]
 
@@ -109,7 +109,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: |
           files: |
             kotlin-solana/XCFrameworkOutputs/amount.xcframework.zip
             kotlin-solana/XCFrameworkOutputs/base58.xcframework.zip
