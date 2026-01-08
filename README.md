@@ -1,3 +1,7 @@
+# ⚠️ Deprecated
+
+> This project has been moved into [web3-kmp](https://github.com/ImL1s/web3-kmp). Please check the new repository for the latest updates.
+
 # Kotlin Multiplatform SDK for Solana (KMP)
 
 ![Banner](assets/banner.png)
@@ -439,4 +443,5 @@ assert(assets.total > 0)
 
 ### License
 This project is licensed under the Metaplex License. See the [LICENSE](LICENSE.txt) file for details.
+
 
