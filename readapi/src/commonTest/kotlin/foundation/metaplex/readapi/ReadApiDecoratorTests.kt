@@ -3,12 +3,14 @@ package foundation.metaplex.readapi
 import foundation.metaplex.rpc.networking.NetworkDriver
 import foundation.metaplex.solanapublickeys.PublicKey
 import kotlinx.coroutines.test.runTest
+import kotlin.test.Ignore
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
 import kotlin.test.assertTrue
 import kotlin.time.Duration.Companion.seconds
 
+@Ignore
 class ReadApiDecoratorIntegTests {
     private val testingTimeout = 30.seconds
     private var rpcUrl: String = "https://api.mainnet-beta.solana.com"

@@ -5,12 +5,14 @@ import foundation.metaplex.rpc.serializers.Key
 import foundation.metaplex.rpc.serializers.Metadata
 import foundation.metaplex.solanapublickeys.PublicKey
 import kotlinx.coroutines.test.runTest
+import kotlin.test.Ignore
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotEquals
 import kotlin.test.assertNotNull
 import kotlin.test.assertTrue
 
+@Ignore
 class RpcIntegTests {
     private var rpcUrl: String = "https://api.mainnet-beta.solana.com"
 

@@ -1,0 +1,704 @@
+Initialized native services in: C:\Users\aa223\.gradle\native
+Initialized jansi services in: C:\Users\aa223\.gradle\native
+Found daemon DaemonInfo{pid=94556, address=[317c78a5-f09b-4f2d-8b7d-8ea98a767b80 port:64827, addresses:[/127.0.0.1]], state=Idle, lastBusy=1768816488113, context=DefaultDaemonContext[uid=b90b0720-c9c0-42be-9e65-ee21e359bbfb,javaHome=C:\Program Files\Eclipse Adoptium\jdk-21.0.9.10-hotspot,javaVersion=21,javaVendor=Eclipse Adoptium,daemonRegistryDir=C:\Users\aa223\.gradle\daemon,pid=94556,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=TW,-Duser.language=zh,-Duser.variant]} however its context does not match the desired criteria.
+At least one daemon option is different.
+Wanted: DaemonRequestContext{jvmCriteria=C:\Program Files\Eclipse Adoptium\jdk-21.0.9.10-hotspot (no JDK specified, using current Java home), daemonOpts=[-XX:MaxMetaspaceSize=1g, -XX:+HeapDumpOnOutOfMemoryError, -Xmx4g, -Dfile.encoding=UTF-8, -Duser.country=TW, -Duser.language=zh, -Duser.variant], applyInstrumentationAgent=true, nativeServicesMode=ENABLED, priority=NORMAL}
+Actual: DefaultDaemonContext[uid=b90b0720-c9c0-42be-9e65-ee21e359bbfb,javaHome=C:\Program Files\Eclipse Adoptium\jdk-21.0.9.10-hotspot,javaVersion=21,javaVendor=Eclipse Adoptium,daemonRegistryDir=C:\Users\aa223\.gradle\daemon,pid=94556,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=TW,-Duser.language=zh,-Duser.variant]
+
+  Looking for a different daemon...
+The client will now receive all logging from the daemon (pid: 77984). The daemon log file: C:\Users\aa223\.gradle\daemon\8.13\daemon-77984.out.log
+Starting 11th build in daemon [uptime: 1 hrs 44 mins 13.342 secs, performance: 100%, GC rate: 0.00/s, heap usage: 0% of 4 GiB, non-heap usage: 28% of 1 GiB]
+Using 32 worker leases.
+Now considering [D:\OtherProject\mine\crypto\kotlin-solana, D:\OtherProject\mine\crypto\kotlin-utxo, D:\OtherProject\mine\crypto\kotlin-address, D:\OtherProject\mine\crypto\kotlin-tx-builder, D:\OtherProject\mine\crypto\kotlin-blockchain-client, D:\OtherProject\mine\crypto\kotlin-crypto-pure] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+ANTIGRAVITY: Including build from ../kotlin-crypto-pure
+ANTIGRAVITY: Including build from ../kotlin-address
+Settings evaluated using settings file 'D:\OtherProject\mine\crypto\kotlin-solana\settings.gradle.kts'.
+Now considering [D:\OtherProject\mine\crypto\kotlin-crypto-pure, D:\OtherProject\mine\crypto\kotlin-solana, D:\OtherProject\mine\crypto\kotlin-utxo, D:\OtherProject\mine\crypto\kotlin-address, D:\OtherProject\mine\crypto\kotlin-tx-builder, D:\OtherProject\mine\crypto\kotlin-blockchain-client] as hierarchies to watch
+ANTIGRAVITY: Including build from D:\OtherProject\mine\crypto\kotlin-blockchain-client
+ANTIGRAVITY: Including build from D:\OtherProject\mine\crypto\kotlin-tx-builder
+ANTIGRAVITY: Including build from D:\OtherProject\mine\crypto\kotlin-utxo
+ANTIGRAVITY: Including build from D:\OtherProject\mine\crypto\kotlin-address
+ANTIGRAVITY: Including build from D:\OtherProject\mine\crypto\kotlin-solana
+Now considering [D:\OtherProject\mine\crypto\kotlin-blockchain-client, D:\OtherProject\mine\crypto\kotlin-crypto-pure, D:\OtherProject\mine\crypto\kotlin-solana, D:\OtherProject\mine\crypto\kotlin-utxo, D:\OtherProject\mine\crypto\kotlin-address, D:\OtherProject\mine\crypto\kotlin-tx-builder] as hierarchies to watch
+Now considering [D:\OtherProject\mine\crypto\kotlin-tx-builder, D:\OtherProject\mine\crypto\kotlin-blockchain-client, D:\OtherProject\mine\crypto\kotlin-crypto-pure, D:\OtherProject\mine\crypto\kotlin-solana, D:\OtherProject\mine\crypto\kotlin-utxo, D:\OtherProject\mine\crypto\kotlin-address] as hierarchies to watch
+Now considering [D:\OtherProject\mine\crypto\kotlin-address, D:\OtherProject\mine\crypto\kotlin-tx-builder, D:\OtherProject\mine\crypto\kotlin-blockchain-client, D:\OtherProject\mine\crypto\kotlin-crypto-pure, D:\OtherProject\mine\crypto\kotlin-solana, D:\OtherProject\mine\crypto\kotlin-utxo] as hierarchies to watch
+Now considering [D:\OtherProject\mine\crypto\kotlin-utxo, D:\OtherProject\mine\crypto\kotlin-address, D:\OtherProject\mine\crypto\kotlin-tx-builder, D:\OtherProject\mine\crypto\kotlin-blockchain-client, D:\OtherProject\mine\crypto\kotlin-crypto-pure, D:\OtherProject\mine\crypto\kotlin-solana] as hierarchies to watch
+Projects loaded. Root project using build file 'D:\OtherProject\mine\crypto\kotlin-solana\build.gradle.kts'.
+Included projects: [root project 'kotlin-solana', project ':amount', project ':base58', project ':mplbubblegum', project ':mpltokenmetadata', project ':readapi', project ':rpc', project ':signer', project ':solana', project ':solanaeddsa', project ':solanapublickeys']
+
+> Configure project :kotlin-crypto-pure
+Evaluating project ':kotlin-crypto-pure' using build file 'D:\OtherProject\mine\crypto\kotlin-crypto-pure\build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.multiplatform', version: '2.1.0', apply: false]
+Resolved plugin [id: 'com.android.library', version: '8.5.2', apply: false]
+Resolved plugin [id: 'com.android.application', version: '8.5.2', apply: false]
+Resolved plugin [id: 'org.jetbrains.compose', version: '1.7.1', apply: false]
+Resolved plugin [id: 'org.jetbrains.kotlin.plugin.compose', version: '2.1.0', apply: false]
+
+> Configure project :kotlin-crypto-pure:crypto-core
+Evaluating project ':kotlin-crypto-pure:crypto-core' using build file 'D:\OtherProject\mine\crypto\kotlin-crypto-pure\crypto-core\build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.multiplatform', version: '2.1.0']
+Resolved plugin [id: 'com.android.library', version: '8.5.2']
+Resolved plugin [id: 'org.gradle.maven-publish']
+Using Kotlin Gradle Plugin gradle85 variant
+Using default execution profile
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+
+> Configure project :kotlin-crypto-pure:demo-app
+Evaluating project ':kotlin-crypto-pure:demo-app' using build file 'D:\OtherProject\mine\crypto\kotlin-crypto-pure\demo-app\build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.multiplatform', version: '2.1.0']
+Resolved plugin [id: 'com.android.application', version: '8.5.2']
+Resolved plugin [id: 'org.jetbrains.compose', version: '1.7.1']
+Resolved plugin [id: 'org.jetbrains.kotlin.plugin.compose', version: '2.1.0']
+Using Kotlin Gradle Plugin gradle85 variant
+Using default execution profile
+Configure multi-module compose resources
+Configure compose resources generation
+Configure Res class generation for commonMain
+Configure resource accessors generation for commonMain
+Configure resource accessors generation for commonTest
+Configure expect resource collectors generation for commonMain
+Configure resource accessors generation for androidInstrumentedTest
+Configure resource accessors generation for androidMain
+Configure resource accessors generation for androidUnitTest
+Configure actual resource collectors generation for androidMain
+Configure resource accessors generation for desktopMain
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+Configure resource accessors generation for desktopTest
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+Configure actual resource collectors generation for desktopMain
+Configure main resources for 'desktop' target
+Configure test resources for 'desktop' target
+Configure debug resources for 'android' target
+Configure debugAndroidTest resources for 'android' target
+Configure release resources for 'android' target
+Configure resource accessors generation for androidInstrumentedTestDebug
+Configure resource accessors generation for androidUnitTestDebug
+Configure resource accessors generation for androidDebug
+Configure resource accessors generation for androidUnitTestRelease
+Configure resource accessors generation for androidRelease
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+Check that new 'org.jetbrains.kotlin.plugin.compose' was applied
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+
+> Configure project :kotlin-crypto-pure:demo-cli
+Evaluating project ':kotlin-crypto-pure:demo-cli' using build file 'D:\OtherProject\mine\crypto\kotlin-crypto-pure\demo-cli\build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.multiplatform', version: '2.1.0']
+Using Kotlin Gradle Plugin gradle85 variant
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+
+> Configure project :kotlin-crypto-pure:kotlin-wallet-sdk
+Evaluating project ':kotlin-crypto-pure:kotlin-wallet-sdk' using build file 'D:\OtherProject\mine\crypto\kotlin-crypto-pure\kotlin-wallet-sdk\build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.multiplatform', version: '2.1.0']
+Using Kotlin Gradle Plugin gradle85 variant
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+Registering project ':kotlin-crypto-pure' in composite build. Will substitute for module 'io.github.iml1s:kotlin-crypto-pure'.
+Registering project ':kotlin-crypto-pure:crypto-core' in composite build. Will substitute for module 'io.github.iml1s:crypto-core'.
+Registering project ':kotlin-crypto-pure:demo-app' in composite build. Will substitute for module 'kotlin-crypto-pure:demo-app'.
+Registering project ':kotlin-crypto-pure:demo-cli' in composite build. Will substitute for module 'kotlin-crypto-pure:demo-cli'.
+Registering project ':kotlin-crypto-pure:kotlin-wallet-sdk' in composite build. Will substitute for module 'kotlin-crypto-pure:kotlin-wallet-sdk'.
+
+> Configure project :kotlin-address
+Evaluating project ':kotlin-address' using build file 'D:\OtherProject\mine\crypto\kotlin-address\build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.multiplatform', version: '2.1.0']
+Resolved plugin [id: 'com.android.library', version: '8.5.2']
+Resolved plugin [id: 'org.gradle.maven-publish']
+Using Kotlin Gradle Plugin gradle85 variant
+Using default execution profile
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+Registering project ':kotlin-address' in composite build. Will substitute for module 'io.github.iml1s:kotlin-address'.
+
+> Configure project :kotlin-tx-builder
+Evaluating project ':kotlin-tx-builder' using build file 'D:\OtherProject\mine\crypto\kotlin-tx-builder\build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.multiplatform', version: '2.1.0']
+Resolved plugin [id: 'com.android.library', version: '8.5.2']
+Resolved plugin [id: 'org.gradle.maven-publish']
+Using Kotlin Gradle Plugin gradle85 variant
+Using default execution profile
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+Registering project ':kotlin-tx-builder' in composite build. Will substitute for module 'io.github.iml1s:kotlin-tx-builder'.
+
+> Configure project :kotlin-utxo
+Evaluating project ':kotlin-utxo' using build file 'D:\OtherProject\mine\crypto\kotlin-utxo\build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.multiplatform', version: '2.1.0']
+Resolved plugin [id: 'com.android.library', version: '8.5.2']
+Resolved plugin [id: 'org.gradle.maven-publish']
+Using Kotlin Gradle Plugin gradle85 variant
+Using default execution profile
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+w: The Default Kotlin Hierarchy Template was not applied to 'project ':kotlin-utxo'':
+Explicit .dependsOn() edges were configured for the following source sets:
+[androidMain, iosArm64Main, iosMain, iosSimulatorArm64Main, iosX64Main, jvmMain, watchosArm64Main, watchosMain, watchosSimulatorArm64Main]
+
+Consider removing dependsOn-calls or disabling the default template by adding
+    'kotlin.mpp.applyDefaultHierarchyTemplate=false'
+to your gradle.properties
+
+Learn more about hierarchy templates: https://kotl.in/hierarchy-template
+
+Registering project ':kotlin-utxo' in composite build. Will substitute for module 'io.github.iml1s:kotlin-utxo'.
+
+> Configure project :kotlin-blockchain-client
+Evaluating project ':kotlin-blockchain-client' using build file 'D:\OtherProject\mine\crypto\kotlin-blockchain-client\build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.multiplatform', version: '2.1.0']
+Resolved plugin [id: 'com.android.library', version: '8.5.2']
+Resolved plugin [id: 'org.jetbrains.kotlin.plugin.serialization', version: '2.1.0']
+Resolved plugin [id: 'org.gradle.maven-publish']
+Using Kotlin Gradle Plugin gradle85 variant
+Using default execution profile
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+w: The Default Kotlin Hierarchy Template was not applied to 'project ':kotlin-blockchain-client'':
+Explicit .dependsOn() edges were configured for the following source sets:
+[iosArm64Main, iosMain, iosSimulatorArm64Main, iosX64Main, watchosArm64Main, watchosMain, watchosSimulatorArm64Main, watchosX64Main]
+
+Consider removing dependsOn-calls or disabling the default template by adding
+    'kotlin.mpp.applyDefaultHierarchyTemplate=false'
+to your gradle.properties
+
+Learn more about hierarchy templates: https://kotl.in/hierarchy-template
+
+Registering project ':kotlin-blockchain-client' in composite build. Will substitute for module 'io.github.iml1s:kotlin-blockchain-client'.
+
+> Configure project :
+Evaluating root project 'kotlin-solana' using build file 'D:\OtherProject\mine\crypto\kotlin-solana\build.gradle.kts'.
+Resolved plugin [id: 'com.android.library', version: '8.5.2', apply: false]
+Resolved plugin [id: 'org.jetbrains.kotlin.multiplatform', version: '2.1.0', apply: false]
+
+> Configure project :amount
+Evaluating project ':amount' using build file 'D:\OtherProject\mine\crypto\kotlin-solana\amount\build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.multiplatform', version: '2.1.0']
+Resolved plugin [id: 'com.android.library', version: '8.5.2']
+Using Kotlin Gradle Plugin gradle85 variant
+Using default execution profile
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+
+> Configure project :base58
+Evaluating project ':base58' using build file 'D:\OtherProject\mine\crypto\kotlin-solana\base58\build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.multiplatform', version: '2.1.0']
+Resolved plugin [id: 'com.android.library', version: '8.5.2']
+Using Kotlin Gradle Plugin gradle85 variant
+Using default execution profile
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+
+> Configure project :mplbubblegum
+Evaluating project ':mplbubblegum' using build file 'D:\OtherProject\mine\crypto\kotlin-solana\mplbubblegum\build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.multiplatform', version: '2.1.0']
+Resolved plugin [id: 'com.android.library', version: '8.5.2']
+Resolved plugin [id: 'org.jetbrains.kotlin.plugin.serialization', version: '1.9.0']
+Using Kotlin Gradle Plugin gradle85 variant
+Using default execution profile
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+
+> Configure project :mpltokenmetadata
+Evaluating project ':mpltokenmetadata' using build file 'D:\OtherProject\mine\crypto\kotlin-solana\mpltokenmetadata\build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.multiplatform', version: '2.1.0']
+Resolved plugin [id: 'com.android.library', version: '8.5.2']
+Resolved plugin [id: 'org.jetbrains.kotlin.plugin.serialization', version: '1.9.0']
+Using Kotlin Gradle Plugin gradle85 variant
+Using default execution profile
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+
+> Configure project :readapi
+Evaluating project ':readapi' using build file 'D:\OtherProject\mine\crypto\kotlin-solana\readapi\build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.multiplatform', version: '2.1.0']
+Resolved plugin [id: 'com.android.library', version: '8.5.2']
+Resolved plugin [id: 'org.jetbrains.kotlin.plugin.serialization', version: '1.9.0']
+Using Kotlin Gradle Plugin gradle85 variant
+Using default execution profile
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+
+> Configure project :rpc
+Evaluating project ':rpc' using build file 'D:\OtherProject\mine\crypto\kotlin-solana\rpc\build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.multiplatform', version: '2.1.0']
+Resolved plugin [id: 'com.android.library', version: '8.5.2']
+Resolved plugin [id: 'org.jetbrains.kotlin.plugin.serialization', version: '1.9.0']
+Using Kotlin Gradle Plugin gradle85 variant
+Using default execution profile
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+
+> Configure project :signer
+Evaluating project ':signer' using build file 'D:\OtherProject\mine\crypto\kotlin-solana\signer\build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.multiplatform', version: '2.1.0']
+Resolved plugin [id: 'com.android.library', version: '8.5.2']
+Using Kotlin Gradle Plugin gradle85 variant
+Using default execution profile
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+
+> Configure project :solana
+Evaluating project ':solana' using build file 'D:\OtherProject\mine\crypto\kotlin-solana\solana\build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.multiplatform', version: '2.1.0']
+Resolved plugin [id: 'com.android.library', version: '8.5.2']
+Using Kotlin Gradle Plugin gradle85 variant
+Using default execution profile
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+
+> Configure project :solanaeddsa
+Evaluating project ':solanaeddsa' using build file 'D:\OtherProject\mine\crypto\kotlin-solana\solanaeddsa\build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.multiplatform', version: '2.1.0']
+Resolved plugin [id: 'com.android.library', version: '8.5.2']
+Using Kotlin Gradle Plugin gradle85 variant
+Using default execution profile
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+
+> Configure project :solanapublickeys
+Evaluating project ':solanapublickeys' using build file 'D:\OtherProject\mine\crypto\kotlin-solana\solanapublickeys\build.gradle.kts'.
+Resolved plugin [id: 'org.jetbrains.kotlin.multiplatform', version: '2.1.0']
+Resolved plugin [id: 'com.android.library', version: '8.5.2']
+Using Kotlin Gradle Plugin gradle85 variant
+Using default execution profile
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+All projects evaluated.
+Registering root project 'kotlin-solana' in composite build. Will substitute for module 'io.github.iml1s:kotlin-solana'.
+Registering project ':amount' in composite build. Will substitute for module 'foundation.metaplex:amount'.
+Registering project ':base58' in composite build. Will substitute for module 'foundation.metaplex:base58'.
+Registering project ':mplbubblegum' in composite build. Will substitute for module 'foundation.metaplex:mplbubblegum'.
+Registering project ':mpltokenmetadata' in composite build. Will substitute for module 'foundation.metaplex:mpltokenmetadata'.
+Registering project ':readapi' in composite build. Will substitute for module 'foundation.metaplex:readapi'.
+Registering project ':rpc' in composite build. Will substitute for module 'foundation.metaplex:rpc'.
+Registering project ':signer' in composite build. Will substitute for module 'foundation.metaplex:signer'.
+Registering project ':solana' in composite build. Will substitute for module 'io.github.iml1s:solana'.
+Registering project ':solanaeddsa' in composite build. Will substitute for module 'foundation.metaplex:solanaeddsa'.
+Registering project ':solanapublickeys' in composite build. Will substitute for module 'foundation.metaplex:solanapublickeys'.
+Task path ':mplbubblegum:jvmTest' matched project ':mplbubblegum'
+Task name matched 'jvmTest'
+Selected primary task 'jvmTest' from project :mplbubblegum
+Found project 'project :kotlin-crypto-pure:crypto-core' as substitute for module 'io.github.iml1s:crypto-core'.
+Found project 'project :kotlin-crypto-pure:crypto-core' as substitute for module 'io.github.iml1s:crypto-core'.
+Found project 'project :kotlin-crypto-pure:crypto-core' as substitute for module 'io.github.iml1s:crypto-core'.
+Found project 'project :kotlin-crypto-pure:crypto-core' as substitute for module 'io.github.iml1s:crypto-core'.
+Found project 'project :kotlin-crypto-pure:crypto-core' as substitute for module 'io.github.iml1s:crypto-core'.
+Tasks to be executed: [task ':amount:checkKotlinGradlePluginConfigurationErrors', task ':amount:compileKotlinJvm', task ':amount:jvmProcessResources', task ':amount:jvmMainClasses', task ':amount:jvmJar', task ':base58:checkKotlinGradlePluginConfigurationErrors', task ':base58:compileKotlinJvm', task ':base58:jvmProcessResources', task ':base58:jvmMainClasses', task ':base58:jvmJar', task ':mplbubblegum:checkKotlinGradlePluginConfigurationErrors', task ':readapi:checkKotlinGradlePluginConfigurationErrors', task ':rpc:checkKotlinGradlePluginConfigurationErrors', task ':solanapublickeys:checkKotlinGradlePluginConfigurationErrors', task ':solanapublickeys:compileKotlinJvm', task ':solanapublickeys:jvmProcessResources', task ':solanapublickeys:jvmMainClasses', task ':solanapublickeys:jvmJar', task ':rpc:compileKotlinJvm', task ':rpc:jvmProcessResources', task ':rpc:jvmMainClasses', task ':rpc:jvmJar', task ':readapi:compileKotlinJvm', task ':readapi:jvmProcessResources', task ':readapi:jvmMainClasses', task ':readapi:jvmJar', task ':signer:checkKotlinGradlePluginConfigurationErrors', task ':signer:compileKotlinJvm', task ':signer:jvmProcessResources', task ':signer:jvmMainClasses', task ':signer:jvmJar', task ':solana:checkKotlinGradlePluginConfigurationErrors', task ':solanaeddsa:checkKotlinGradlePluginConfigurationErrors', task ':solanaeddsa:compileKotlinJvm', task ':solanaeddsa:jvmProcessResources', task ':solanaeddsa:jvmMainClasses', task ':solanaeddsa:jvmJar', task ':solana:compileKotlinJvm', task ':solana:jvmProcessResources', task ':solana:jvmMainClasses', task ':solana:jvmJar', task ':mplbubblegum:compileKotlinJvm', task ':mplbubblegum:jvmProcessResources', task ':mplbubblegum:jvmMainClasses', task ':mplbubblegum:jvmJar', task ':mplbubblegum:compileTestKotlinJvm', task ':mplbubblegum:jvmTestProcessResources', task ':mplbubblegum:jvmTestClasses', task ':mplbubblegum:jvmTest']
+Tasks that were excluded: []
+Resolve mutations for :amount:checkKotlinGradlePluginConfigurationErrors (Thread[#4791,included builds Thread 2,5,main]) started.
+Resolve mutations for :kotlin-crypto-pure:crypto-core:checkKotlinGradlePluginConfigurationErrors (Thread[#4792,Execution worker,5,main]) started.
+:amount:checkKotlinGradlePluginConfigurationErrors (Thread[#4791,included builds Thread 2,5,main]) started.
+:kotlin-crypto-pure:crypto-core:checkKotlinGradlePluginConfigurationErrors (Thread[#4795,Execution worker Thread 4,5,main]) started.
+
+> Task :amount:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':amount:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+
+> Task :kotlin-crypto-pure:crypto-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':kotlin-crypto-pure:crypto-core:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :amount:compileKotlinJvm (Thread[#4791,included builds Thread 2,5,main]) started.
+Resolve mutations for :kotlin-crypto-pure:crypto-core:compileKotlinJvm (Thread[#4795,Execution worker Thread 4,5,main]) started.
+:kotlin-crypto-pure:crypto-core:compileKotlinJvm (Thread[#4795,Execution worker Thread 4,5,main]) started.
+:amount:compileKotlinJvm (Thread[#4791,included builds Thread 2,5,main]) started.
+
+> Task :amount:compileKotlinJvm UP-TO-DATE
+Caching disabled for task ':amount:compileKotlinJvm' because:
+  Build cache is disabled
+Skipping task ':amount:compileKotlinJvm' as it is up-to-date.
+Resolve mutations for :amount:jvmProcessResources (Thread[#4791,included builds Thread 2,5,main]) started.
+:amount:jvmProcessResources (Thread[#4791,included builds Thread 2,5,main]) started.
+
+> Task :kotlin-crypto-pure:crypto-core:compileKotlinJvm UP-TO-DATE
+Caching disabled for task ':kotlin-crypto-pure:crypto-core:compileKotlinJvm' because:
+  Build cache is disabled
+Skipping task ':kotlin-crypto-pure:crypto-core:compileKotlinJvm' as it is up-to-date.
+Resolve mutations for :kotlin-crypto-pure:crypto-core:jvmProcessResources (Thread[#4817,Execution worker Thread 24,5,main]) started.
+:kotlin-crypto-pure:crypto-core:jvmProcessResources (Thread[#4817,Execution worker Thread 24,5,main]) started.
+
+> Task :amount:jvmProcessResources NO-SOURCE
+Skipping task ':amount:jvmProcessResources' as it has no source files and no previous output files.
+
+> Task :kotlin-crypto-pure:crypto-core:jvmProcessResources NO-SOURCE
+Skipping task ':kotlin-crypto-pure:crypto-core:jvmProcessResources' as it has no source files and no previous output files.
+Resolve mutations for :amount:jvmMainClasses (Thread[#4791,included builds Thread 2,5,main]) started.
+Resolve mutations for :kotlin-crypto-pure:crypto-core:jvmMainClasses (Thread[#4817,Execution worker Thread 24,5,main]) started.
+:amount:jvmMainClasses (Thread[#4791,included builds Thread 2,5,main]) started.
+:kotlin-crypto-pure:crypto-core:jvmMainClasses (Thread[#4817,Execution worker Thread 24,5,main]) started.
+
+> Task :amount:jvmMainClasses UP-TO-DATE
+Skipping task ':amount:jvmMainClasses' as it has no actions.
+
+> Task :kotlin-crypto-pure:crypto-core:jvmMainClasses UP-TO-DATE
+Skipping task ':kotlin-crypto-pure:crypto-core:jvmMainClasses' as it has no actions.
+Resolve mutations for :kotlin-crypto-pure:crypto-core:jvmJar (Thread[#4817,Execution worker Thread 24,5,main]) started.
+Resolve mutations for :amount:jvmJar (Thread[#4791,included builds Thread 2,5,main]) started.
+:kotlin-crypto-pure:crypto-core:jvmJar (Thread[#4817,Execution worker Thread 24,5,main]) started.
+:amount:jvmJar (Thread[#4791,included builds Thread 2,5,main]) started.
+
+> Task :amount:jvmJar UP-TO-DATE
+Caching disabled for task ':amount:jvmJar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':amount:jvmJar' as it is up-to-date.
+work action resolve amount-jvm-main-SNAPSHOT.jar (project :amount) (Thread[#4791,included builds Thread 2,5,main]) started.
+Resolve mutations for :base58:checkKotlinGradlePluginConfigurationErrors (Thread[#4791,included builds Thread 2,5,main]) started.
+:base58:checkKotlinGradlePluginConfigurationErrors (Thread[#4791,included builds Thread 2,5,main]) started.
+
+> Task :kotlin-crypto-pure:crypto-core:jvmJar UP-TO-DATE
+Caching disabled for task ':kotlin-crypto-pure:crypto-core:jvmJar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':kotlin-crypto-pure:crypto-core:jvmJar' as it is up-to-date.
+other build task :kotlin-crypto-pure:crypto-core:jvmJar (Thread[#4817,Execution worker Thread 24,5,main]) started.
+work action resolve crypto-core-jvm-1.3.0.jar (project :kotlin-crypto-pure:crypto-core) (Thread[#4817,Execution worker Thread 24,5,main]) started.
+
+> Task :base58:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':base58:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :base58:compileKotlinJvm (Thread[#4791,included builds Thread 2,5,main]) started.
+:base58:compileKotlinJvm (Thread[#4791,included builds Thread 2,5,main]) started.
+
+> Task :base58:compileKotlinJvm UP-TO-DATE
+Caching disabled for task ':base58:compileKotlinJvm' because:
+  Build cache is disabled
+Skipping task ':base58:compileKotlinJvm' as it is up-to-date.
+Resolve mutations for :base58:jvmProcessResources (Thread[#4791,included builds Thread 2,5,main]) started.
+:base58:jvmProcessResources (Thread[#4791,included builds Thread 2,5,main]) started.
+
+> Task :base58:jvmProcessResources NO-SOURCE
+Skipping task ':base58:jvmProcessResources' as it has no source files and no previous output files.
+Resolve mutations for :base58:jvmMainClasses (Thread[#4791,included builds Thread 2,5,main]) started.
+:base58:jvmMainClasses (Thread[#4791,included builds Thread 2,5,main]) started.
+
+> Task :base58:jvmMainClasses UP-TO-DATE
+Skipping task ':base58:jvmMainClasses' as it has no actions.
+Resolve mutations for :base58:jvmJar (Thread[#4791,included builds Thread 2,5,main]) started.
+:base58:jvmJar (Thread[#4791,included builds Thread 2,5,main]) started.
+
+> Task :base58:jvmJar UP-TO-DATE
+Caching disabled for task ':base58:jvmJar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':base58:jvmJar' as it is up-to-date.
+work action resolve base58-jvm-main-SNAPSHOT.jar (project :base58) (Thread[#4791,included builds Thread 2,5,main]) started.
+Resolve mutations for :mplbubblegum:checkKotlinGradlePluginConfigurationErrors (Thread[#4791,included builds Thread 2,5,main]) started.
+:mplbubblegum:checkKotlinGradlePluginConfigurationErrors (Thread[#4791,included builds Thread 2,5,main]) started.
+
+> Task :mplbubblegum:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':mplbubblegum:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :readapi:checkKotlinGradlePluginConfigurationErrors (Thread[#4791,included builds Thread 2,5,main]) started.
+:readapi:checkKotlinGradlePluginConfigurationErrors (Thread[#4791,included builds Thread 2,5,main]) started.
+
+> Task :readapi:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':readapi:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :rpc:checkKotlinGradlePluginConfigurationErrors (Thread[#4791,included builds Thread 2,5,main]) started.
+:rpc:checkKotlinGradlePluginConfigurationErrors (Thread[#4791,included builds Thread 2,5,main]) started.
+
+> Task :rpc:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':rpc:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :solanapublickeys:checkKotlinGradlePluginConfigurationErrors (Thread[#4791,included builds Thread 2,5,main]) started.
+:solanapublickeys:checkKotlinGradlePluginConfigurationErrors (Thread[#4791,included builds Thread 2,5,main]) started.
+
+> Task :solanapublickeys:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':solanapublickeys:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :solanapublickeys:compileKotlinJvm (Thread[#4791,included builds Thread 2,5,main]) started.
+:solanapublickeys:compileKotlinJvm (Thread[#4791,included builds Thread 2,5,main]) started.
+
+> Task :solanapublickeys:compileKotlinJvm UP-TO-DATE
+Caching disabled for task ':solanapublickeys:compileKotlinJvm' because:
+  Build cache is disabled
+Skipping task ':solanapublickeys:compileKotlinJvm' as it is up-to-date.
+Resolve mutations for :solanapublickeys:jvmProcessResources (Thread[#4791,included builds Thread 2,5,main]) started.
+:solanapublickeys:jvmProcessResources (Thread[#4791,included builds Thread 2,5,main]) started.
+
+> Task :solanapublickeys:jvmProcessResources NO-SOURCE
+Skipping task ':solanapublickeys:jvmProcessResources' as it has no source files and no previous output files.
+Resolve mutations for :solanapublickeys:jvmMainClasses (Thread[#4791,included builds Thread 2,5,main]) started.
+:solanapublickeys:jvmMainClasses (Thread[#4819,Execution worker Thread 26,5,main]) started.
+
+> Task :solanapublickeys:jvmMainClasses UP-TO-DATE
+Skipping task ':solanapublickeys:jvmMainClasses' as it has no actions.
+Resolve mutations for :solanapublickeys:jvmJar (Thread[#4810,Execution worker Thread 18,5,main]) started.
+:solanapublickeys:jvmJar (Thread[#4810,Execution worker Thread 18,5,main]) started.
+
+> Task :solanapublickeys:jvmJar UP-TO-DATE
+Caching disabled for task ':solanapublickeys:jvmJar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':solanapublickeys:jvmJar' as it is up-to-date.
+work action resolve solanapublickeys-jvm-main-SNAPSHOT.jar (project :solanapublickeys) (Thread[#4810,Execution worker Thread 18,5,main]) started.
+Resolve mutations for :rpc:compileKotlinJvm (Thread[#4810,Execution worker Thread 18,5,main]) started.
+:rpc:compileKotlinJvm (Thread[#4805,Execution worker Thread 14,5,main]) started.
+
+> Task :rpc:compileKotlinJvm UP-TO-DATE
+Caching disabled for task ':rpc:compileKotlinJvm' because:
+  Build cache is disabled
+Skipping task ':rpc:compileKotlinJvm' as it is up-to-date.
+Resolve mutations for :rpc:jvmProcessResources (Thread[#4805,Execution worker Thread 14,5,main]) started.
+:rpc:jvmProcessResources (Thread[#4805,Execution worker Thread 14,5,main]) started.
+
+> Task :rpc:jvmProcessResources NO-SOURCE
+Skipping task ':rpc:jvmProcessResources' as it has no source files and no previous output files.
+Resolve mutations for :rpc:jvmMainClasses (Thread[#4805,Execution worker Thread 14,5,main]) started.
+:rpc:jvmMainClasses (Thread[#4805,Execution worker Thread 14,5,main]) started.
+
+> Task :rpc:jvmMainClasses UP-TO-DATE
+Skipping task ':rpc:jvmMainClasses' as it has no actions.
+Resolve mutations for :rpc:jvmJar (Thread[#4805,Execution worker Thread 14,5,main]) started.
+:rpc:jvmJar (Thread[#4805,Execution worker Thread 14,5,main]) started.
+
+> Task :rpc:jvmJar UP-TO-DATE
+Caching disabled for task ':rpc:jvmJar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':rpc:jvmJar' as it is up-to-date.
+work action resolve rpc-jvm-main-SNAPSHOT.jar (project :rpc) (Thread[#4805,Execution worker Thread 14,5,main]) started.
+Resolve mutations for :readapi:compileKotlinJvm (Thread[#4805,Execution worker Thread 14,5,main]) started.
+:readapi:compileKotlinJvm (Thread[#4805,Execution worker Thread 14,5,main]) started.
+
+> Task :readapi:compileKotlinJvm UP-TO-DATE
+Caching disabled for task ':readapi:compileKotlinJvm' because:
+  Build cache is disabled
+Skipping task ':readapi:compileKotlinJvm' as it is up-to-date.
+Resolve mutations for :readapi:jvmProcessResources (Thread[#4805,Execution worker Thread 14,5,main]) started.
+:readapi:jvmProcessResources (Thread[#4805,Execution worker Thread 14,5,main]) started.
+
+> Task :readapi:jvmProcessResources NO-SOURCE
+Skipping task ':readapi:jvmProcessResources' as it has no source files and no previous output files.
+Resolve mutations for :readapi:jvmMainClasses (Thread[#4805,Execution worker Thread 14,5,main]) started.
+:readapi:jvmMainClasses (Thread[#4805,Execution worker Thread 14,5,main]) started.
+
+> Task :readapi:jvmMainClasses UP-TO-DATE
+Skipping task ':readapi:jvmMainClasses' as it has no actions.
+Resolve mutations for :readapi:jvmJar (Thread[#4805,Execution worker Thread 14,5,main]) started.
+:readapi:jvmJar (Thread[#4805,Execution worker Thread 14,5,main]) started.
+
+> Task :readapi:jvmJar UP-TO-DATE
+Caching disabled for task ':readapi:jvmJar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':readapi:jvmJar' as it is up-to-date.
+work action resolve readapi-jvm-main-SNAPSHOT.jar (project :readapi) (Thread[#4805,Execution worker Thread 14,5,main]) started.
+Resolve mutations for :signer:checkKotlinGradlePluginConfigurationErrors (Thread[#4805,Execution worker Thread 14,5,main]) started.
+:signer:checkKotlinGradlePluginConfigurationErrors (Thread[#4805,Execution worker Thread 14,5,main]) started.
+
+> Task :signer:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':signer:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :signer:compileKotlinJvm (Thread[#4805,Execution worker Thread 14,5,main]) started.
+:signer:compileKotlinJvm (Thread[#4792,Execution worker,5,main]) started.
+
+> Task :signer:compileKotlinJvm UP-TO-DATE
+Caching disabled for task ':signer:compileKotlinJvm' because:
+  Build cache is disabled
+Skipping task ':signer:compileKotlinJvm' as it is up-to-date.
+Resolve mutations for :signer:jvmProcessResources (Thread[#4792,Execution worker,5,main]) started.
+:signer:jvmProcessResources (Thread[#4792,Execution worker,5,main]) started.
+
+> Task :signer:jvmProcessResources NO-SOURCE
+Skipping task ':signer:jvmProcessResources' as it has no source files and no previous output files.
+Resolve mutations for :signer:jvmMainClasses (Thread[#4792,Execution worker,5,main]) started.
+:signer:jvmMainClasses (Thread[#4792,Execution worker,5,main]) started.
+
+> Task :signer:jvmMainClasses UP-TO-DATE
+Skipping task ':signer:jvmMainClasses' as it has no actions.
+Resolve mutations for :signer:jvmJar (Thread[#4817,Execution worker Thread 24,5,main]) started.
+:signer:jvmJar (Thread[#4817,Execution worker Thread 24,5,main]) started.
+
+> Task :signer:jvmJar UP-TO-DATE
+Caching disabled for task ':signer:jvmJar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':signer:jvmJar' as it is up-to-date.
+work action resolve signer-jvm-main-SNAPSHOT.jar (project :signer) (Thread[#4817,Execution worker Thread 24,5,main]) started.
+Resolve mutations for :solana:checkKotlinGradlePluginConfigurationErrors (Thread[#4817,Execution worker Thread 24,5,main]) started.
+:solana:checkKotlinGradlePluginConfigurationErrors (Thread[#4817,Execution worker Thread 24,5,main]) started.
+
+> Task :solana:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':solana:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :solanaeddsa:checkKotlinGradlePluginConfigurationErrors (Thread[#4817,Execution worker Thread 24,5,main]) started.
+:solanaeddsa:checkKotlinGradlePluginConfigurationErrors (Thread[#4821,Execution worker Thread 28,5,main]) started.
+
+> Task :solanaeddsa:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':solanaeddsa:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :solanaeddsa:compileKotlinJvm (Thread[#4801,Execution worker Thread 10,5,main]) started.
+:solanaeddsa:compileKotlinJvm (Thread[#4801,Execution worker Thread 10,5,main]) started.
+
+> Task :solanaeddsa:compileKotlinJvm UP-TO-DATE
+Caching disabled for task ':solanaeddsa:compileKotlinJvm' because:
+  Build cache is disabled
+Skipping task ':solanaeddsa:compileKotlinJvm' as it is up-to-date.
+Resolve mutations for :solanaeddsa:jvmProcessResources (Thread[#4801,Execution worker Thread 10,5,main]) started.
+:solanaeddsa:jvmProcessResources (Thread[#4801,Execution worker Thread 10,5,main]) started.
+
+> Task :solanaeddsa:jvmProcessResources NO-SOURCE
+Skipping task ':solanaeddsa:jvmProcessResources' as it has no source files and no previous output files.
+Resolve mutations for :solanaeddsa:jvmMainClasses (Thread[#4801,Execution worker Thread 10,5,main]) started.
+:solanaeddsa:jvmMainClasses (Thread[#4801,Execution worker Thread 10,5,main]) started.
+
+> Task :solanaeddsa:jvmMainClasses UP-TO-DATE
+Skipping task ':solanaeddsa:jvmMainClasses' as it has no actions.
+Resolve mutations for :solanaeddsa:jvmJar (Thread[#4801,Execution worker Thread 10,5,main]) started.
+:solanaeddsa:jvmJar (Thread[#4801,Execution worker Thread 10,5,main]) started.
+
+> Task :solanaeddsa:jvmJar UP-TO-DATE
+Caching disabled for task ':solanaeddsa:jvmJar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':solanaeddsa:jvmJar' as it is up-to-date.
+work action resolve solanaeddsa-jvm-main-SNAPSHOT.jar (project :solanaeddsa) (Thread[#4801,Execution worker Thread 10,5,main]) started.
+Resolve mutations for :solana:compileKotlinJvm (Thread[#4801,Execution worker Thread 10,5,main]) started.
+:solana:compileKotlinJvm (Thread[#4801,Execution worker Thread 10,5,main]) started.
+
+> Task :solana:compileKotlinJvm UP-TO-DATE
+Caching disabled for task ':solana:compileKotlinJvm' because:
+  Build cache is disabled
+Skipping task ':solana:compileKotlinJvm' as it is up-to-date.
+Resolve mutations for :solana:jvmProcessResources (Thread[#4801,Execution worker Thread 10,5,main]) started.
+:solana:jvmProcessResources (Thread[#4801,Execution worker Thread 10,5,main]) started.
+
+> Task :solana:jvmProcessResources NO-SOURCE
+Skipping task ':solana:jvmProcessResources' as it has no source files and no previous output files.
+Resolve mutations for :solana:jvmMainClasses (Thread[#4801,Execution worker Thread 10,5,main]) started.
+:solana:jvmMainClasses (Thread[#4801,Execution worker Thread 10,5,main]) started.
+
+> Task :solana:jvmMainClasses UP-TO-DATE
+Skipping task ':solana:jvmMainClasses' as it has no actions.
+Resolve mutations for :solana:jvmJar (Thread[#4813,Execution worker Thread 21,5,main]) started.
+:solana:jvmJar (Thread[#4808,Execution worker Thread 17,5,main]) started.
+
+> Task :solana:jvmJar UP-TO-DATE
+Caching disabled for task ':solana:jvmJar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':solana:jvmJar' as it is up-to-date.
+work action resolve solana-jvm-1.3.0.jar (project :solana) (Thread[#4808,Execution worker Thread 17,5,main]) started.
+Resolve mutations for :mplbubblegum:compileKotlinJvm (Thread[#4804,Execution worker Thread 13,5,main]) started.
+:mplbubblegum:compileKotlinJvm (Thread[#4804,Execution worker Thread 13,5,main]) started.
+
+> Task :mplbubblegum:compileKotlinJvm UP-TO-DATE
+Caching disabled for task ':mplbubblegum:compileKotlinJvm' because:
+  Build cache is disabled
+Skipping task ':mplbubblegum:compileKotlinJvm' as it is up-to-date.
+Resolve mutations for :mplbubblegum:jvmProcessResources (Thread[#4804,Execution worker Thread 13,5,main]) started.
+:mplbubblegum:jvmProcessResources (Thread[#4804,Execution worker Thread 13,5,main]) started.
+
+> Task :mplbubblegum:jvmProcessResources NO-SOURCE
+Skipping task ':mplbubblegum:jvmProcessResources' as it has no source files and no previous output files.
+Resolve mutations for :mplbubblegum:jvmMainClasses (Thread[#4804,Execution worker Thread 13,5,main]) started.
+:mplbubblegum:jvmMainClasses (Thread[#4804,Execution worker Thread 13,5,main]) started.
+
+> Task :mplbubblegum:jvmMainClasses UP-TO-DATE
+Skipping task ':mplbubblegum:jvmMainClasses' as it has no actions.
+Resolve mutations for :mplbubblegum:jvmJar (Thread[#4804,Execution worker Thread 13,5,main]) started.
+:mplbubblegum:jvmJar (Thread[#4804,Execution worker Thread 13,5,main]) started.
+
+> Task :mplbubblegum:jvmJar UP-TO-DATE
+Caching disabled for task ':mplbubblegum:jvmJar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':mplbubblegum:jvmJar' as it is up-to-date.
+Resolve mutations for :mplbubblegum:compileTestKotlinJvm (Thread[#4804,Execution worker Thread 13,5,main]) started.
+:mplbubblegum:compileTestKotlinJvm (Thread[#4799,Execution worker Thread 8,5,main]) started.
+
+> Task :mplbubblegum:compileTestKotlinJvm UP-TO-DATE
+Caching disabled for task ':mplbubblegum:compileTestKotlinJvm' because:
+  Build cache is disabled
+Skipping task ':mplbubblegum:compileTestKotlinJvm' as it is up-to-date.
+Resolve mutations for :mplbubblegum:jvmTestProcessResources (Thread[#4799,Execution worker Thread 8,5,main]) started.
+:mplbubblegum:jvmTestProcessResources (Thread[#4799,Execution worker Thread 8,5,main]) started.
+
+> Task :mplbubblegum:jvmTestProcessResources NO-SOURCE
+Skipping task ':mplbubblegum:jvmTestProcessResources' as it has no source files and no previous output files.
+Resolve mutations for :mplbubblegum:jvmTestClasses (Thread[#4799,Execution worker Thread 8,5,main]) started.
+:mplbubblegum:jvmTestClasses (Thread[#4813,Execution worker Thread 21,5,main]) started.
+
+> Task :mplbubblegum:jvmTestClasses UP-TO-DATE
+Skipping task ':mplbubblegum:jvmTestClasses' as it has no actions.
+Resolve mutations for :mplbubblegum:jvmTest (Thread[#4813,Execution worker Thread 21,5,main]) started.
+:mplbubblegum:jvmTest (Thread[#4813,Execution worker Thread 21,5,main]) started.
+Gradle Test Executor 14 started executing tests.
+Gradle Test Executor 14 finished executing tests.
+
+> Task :mplbubblegum:jvmTest
+[KOTLIN] Marking task ':mplbubblegum:jvmTest' as not up-to-date because the task has failed previously
+Caching disabled for task ':mplbubblegum:jvmTest' because:
+  Build cache is disabled
+Task ':mplbubblegum:jvmTest' is not up-to-date because:
+  Task.upToDateWhen is false.
+Starting process 'Gradle Test Executor 14'. Working directory: D:\OtherProject\mine\crypto\kotlin-solana\mplbubblegum Command: C:\Program Files\Eclipse Adoptium\jdk-21.0.9.10-hotspot\bin\java.exe -Dorg.gradle.internal.worker.tmpdir=D:\OtherProject\mine\crypto\kotlin-solana\mplbubblegum\build\tmp\jvmTest\work @C:\Users\aa223\.gradle\.tmp\gradle-worker-classpath4109329560356611691txt -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=TW -Duser.language=zh -Duser.variant -ea worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 14'
+Successfully started process 'Gradle Test Executor 14'
+
+BubblegumIntegTest[jvm] > testMintV1[jvm] STANDARD_ERROR
+    SLF4J(W): No SLF4J providers were found.
+    SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+    SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+
+BubblegumIntegTest[jvm] > testMintV1[jvm] STANDARD_OUT
+    {"jsonrpc":"2.0","result":{"context":{"apiVersion":"3.1.6","slot":436198073},"value":{"blockhash":"DTBSaNH2mDpq6iVQiy6PLabqHdfRQryRvdT5vFZiVZtj","lastValidBlockHeight":424104669}},"id":"4171712622"}
+
+    {"jsonrpc":"2.0","result":222218880,"id":"4065204654"}
+
+    {"jsonrpc":"2.0","error":{"code":-32002,"message":"Transaction simulation failed: Error processing Instruction 1: custom program error: 0x1776","data":{"accounts":null,"err":{"InstructionError":[1,{"Custom":6006}]},"fee":10000,"innerInstructions":null,"loadedAccountsDataSize":4323529,"loadedAddresses":null,"logs":["Program 11111111111111111111111111111111 invoke [1]","Program 11111111111111111111111111111111 success","Program BGUMAp9Gq7iTEuizy4pqaxsTyUCBK68MDfK752saRPUY invoke [1]","Program log: Instruction: CreateTree","Program 11111111111111111111111111111111 invoke [2]","Program 11111111111111111111111111111111 success","Program cmtDvXumGCrqC1Age74AVPhSRVXJMd8PJS91L8KbNCK invoke [2]","Program log: Instruction: InitEmptyMerkleTree","Program log: AnchorError thrown in programs/account-compression/src/lib.rs:155. Error Code: IncorrectAccountOwner. Error Number: 6006. Error Message: Account is owned by a different program, expected it to be owned by this program.","Program log: Left: 39v3grKAgc11JoNWEXG8VRYt1i7uv7mPLEetaERKEYNW","Program log: Right: cmtDvXumGCrqC1Age74AVPhSRVXJMd8PJS91L8KbNCK","Program cmtDvXumGCrqC1Age74AVPhSRVXJMd8PJS91L8KbNCK consumed 27291 of 389717 compute units","Program cmtDvXumGCrqC1Age74AVPhSRVXJMd8PJS91L8KbNCK failed: custom program error: 0x1776","Program BGUMAp9Gq7iTEuizy4pqaxsTyUCBK68MDfK752saRPUY consumed 40424 of 402850 compute units","Program BGUMAp9Gq7iTEuizy4pqaxsTyUCBK68MDfK752saRPUY failed: custom program error: 0x1776"],"postBalances":null,"postTokenBalances":null,"preBalances":null,"preTokenBalances":null,"replacementBlockhash":null,"returnData":null,"unitsConsumed":40574}},"id":"1846417861"}
+
+
+BubblegumIntegTest[jvm] > testMintV1[jvm] FAILED
+    java.lang.Error: Transaction simulation failed: Error processing Instruction 1: custom program error: 0x1776
+        at foundation.metaplex.rpc.RPC.sendTransaction(Rpc.kt:475)
+        at foundation.metaplex.rpc.RPC$sendTransaction$1.invokeSuspend(Rpc.kt)
+        at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+        at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)
+        at kotlinx.coroutines.test.TestDispatcher.processEvent$kotlinx_coroutines_test(TestDispatcher.kt:24)
+        at kotlinx.coroutines.test.TestCoroutineScheduler.tryRunNextTaskUnless$kotlinx_coroutines_test(TestCoroutineScheduler.kt:99)
+        at kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$workRunner$1.invokeSuspend(TestBuilders.kt:327)
+        at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+        at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)
+        at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+        at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:95)
+        at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:69)
+        at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)
+        at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:47)
+        at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)
+        at kotlinx.coroutines.test.TestBuildersJvmKt.createTestResult(TestBuildersJvm.kt:10)
+        at kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0(TestBuilders.kt:310)
+        at kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0(Unknown Source)
+        at kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0(TestBuilders.kt:168)
+        at kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0(Unknown Source)
+        at kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0$default(TestBuilders.kt:160)
+        at kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0$default(Unknown Source)
+        at foundation.metaplex.mplbubblegum.BubblegumIntegTest.testMintV1(BubblegumTests.kt:182)
+
+1 test completed, 1 failed
+Finished generating test XML results (0.001 secs) into: D:\OtherProject\mine\crypto\kotlin-solana\mplbubblegum\build\test-results\jvmTest
+Generating HTML test report...
+Finished generating test html results (0.005 secs) into: D:\OtherProject\mine\crypto\kotlin-solana\mplbubblegum\build\reports\tests\jvmTest
+
+> Task :mplbubblegum:jvmTest FAILED
+
+
+[Incubating] Problems report is available at: file:///D:/OtherProject/mine/crypto/kotlin-solana/build/reports/problems/problems-report.html
+FAILURE: Build failed with an exception.
+
+
+* What went wrong:
+Execution failed for task ':mplbubblegum:jvmTest'.
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+> There were failing tests. See the report at: file:///D:/OtherProject/mine/crypto/kotlin-solana/mplbubblegum/build/reports/tests/jvmTest/index.html
+
+* Try:
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+> Run with --scan to get full insights.
+
+For more on this, please refer to https://docs.gradle.org/8.13/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 11s
+22 actionable tasks: 1 executed, 21 up-to-date
+Watched directory hierarchies: [D:\OtherProject\mine\crypto\kotlin-utxo, D:\OtherProject\mine\crypto\kotlin-address, D:\OtherProject\mine\crypto\kotlin-tx-builder, D:\OtherProject\mine\crypto\kotlin-blockchain-client, D:\OtherProject\mine\crypto\kotlin-crypto-pure, D:\OtherProject\mine\crypto\kotlin-solana]
